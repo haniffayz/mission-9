@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "duck-brave";
+    src: url("duck-brave-font/duckbraveregular-vndr7.ttf");
+}
+
+/* ========== Global Styles ========== */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+}
+
+/* ========== Card Container ========== */
+.card-container {
+    perspective: 1000px;
+}
+
+/* ========== Card Styles ========== */
+.card {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    border-radius: 16px;
+    background: #e0e0e0;
+    box-shadow: 8px 8px 16px #aaa, -8px -8px 16px #fff;
+}
+
+/* Animasi Flip */
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* ========== Card Faces ========== */
+.card-front, 
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Front Side ========== */
+.card-front {
+    background: white;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tombol Lihat */
+.card-front .card-content {
+    /* position: absolute; */
+    /* bottom: 20px; */
+    width: 100%;
+    text-align: center;
+}
+
+.card-front button {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5rem;
+    font-weight: bold;
+    color: #090909;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.card-front button:hover {
+    background: #dcdcdc;
+}
+
+.card-front button span {
+    margin-right: 0.5rem;
+}
+
+/* ========== Back Side ========== */
+.card-back {
+    background: #C19A6B;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========== Content ========== */
+.card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Judul */
+.card-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffff;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: duck-brave;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+
+/* ========== Pertanyaan & Text-to-Speech ========== */
+.question-component {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 12px;
+    /* margin: 0px; */
+    padding: 25px 40px;
+    background: #BB9351;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Pertanyaan */
+.question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* max-width: 300px; */
+    text-align: justify;
+}
+
+/* Tombol Text-to-Speech */
+.speak-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    margin-top: 1.5rem;
+    height: 42px;
+    border-radius: 50%;
+    /* background: #ffcc00; */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* box-shadow: 3px 3px 6px #aaa, -3px -3px 6px #fff; */
+    margin-left: 0.8rem;
+    transition: 0.3s ease;
+}
+
+/* .speak-btn:hover {
+    background: #e0b800;
+    transform: scale(1.1);
+} */
+
+/* Ikon Text-to-Speech */
+.speak-btn i {
+    font-size: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* ========== Konten Tambahan ========== */
+.content {
+    font-size: 1.4rem;
+    /* font-weight: bold; */
+    margin-top: 6rem;
+    font-family: duck-brave;
+}
+

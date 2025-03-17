@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility" />
+    <title>Swarna Rashtra</title>
+</head>
+<body>
+    <div class="card-container" onclick="flipCard()"> 
+        <div class="card">
+            <!-- Sisi Depan -->
+            <div class="card-front">
+                <img src="SR Card_page-0001.png" alt="Background Image">
+                <div class="card-content">
+                    <button>
+                        <span class="material-symbols-outlined">visibility</span> Lihat
+                    </button>
+                </div>
+            </div>
+            <!-- Sisi Belakang -->
+            <div class="card-back">
+                <div class="card-content">
+                    <h1>Mission Card</h1>
+                    <div class="question-component">
+                        <p class="question">Apa yang dimaksud dengan demokrasi dan bagaimana prinsip-prinsip demokrasi diterapkan di Indonesia ?</p>
+                    </div>
+                    <a href="javascript:void(0)" class="speak-btn" onclick="speakText(event)">
+                        <i class="fas fa-volume-up"></i>
+                    </a>                        
+                    <p class="content">Swarna Rashtra</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
